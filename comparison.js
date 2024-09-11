@@ -1,6 +1,5 @@
 let firstFavNum = 22;
 let secondFavNum = 30;
-let thirdFavNum = 45;
 
 // GREATER THAN 
 console.log("GREATER THAN");
@@ -54,27 +53,27 @@ console.log(firstFavNum + " != " + secondFavNum + " = " + LooseInequality);
 //AND
 console.log("AND");
 
-console.log(firstFavNum + " > " + secondFavNum + " && " + secondFavNum + " < " + thirdFavNum);
-console.log(firstFavNum > secondFavNum && secondFavNum < thirdFavNum); 
-//output: 22 > 30 && 30 < 45
+console.log(firstFavNum + " > " + secondFavNum + " && " + secondFavNum + " < " + firstFavNum);
+console.log(firstFavNum > secondFavNum && secondFavNum < firstFavNum); 
+//output: 22 > 30 && 30 < 22
 //        false
 
-console.log(thirdFavNum + " >= " + secondFavNum + " && " + firstFavNum + " != " + thirdFavNum);
-console.log(thirdFavNum >= secondFavNum && firstFavNum != thirdFavNum);
-//output: 45 >= 30 && 22 != 45
+console.log(secondFavNum + " >= " + secondFavNum + " && " + firstFavNum + " == " + firstFavNum);
+console.log(secondFavNum >= secondFavNum && firstFavNum == firstFavNum);
+//output: 30 >= 30 && 22 != 22
 //        true
 
 //OR
 console.log("OR");
 
-console.log(firstFavNum + " > " + thirdFavNum + " || " + secondFavNum + " >= " + firstFavNum);
-console.log(firstFavNum > thirdFavNum || secondFavNum >= firstFavNum);
-//output: 22 > 45 || 30 >= 22
+console.log(firstFavNum + " > " + secondFavNum + " || " + secondFavNum + " >= " + firstFavNum);
+console.log(firstFavNum > secondFavNum || secondFavNum >= firstFavNum);
+//output: 22 > 30 || 30 >= 22
 //        true
 
-console.log(thirdFavNum + " == " + firstFavNum + " || " + firstFavNum + " >= " + secondFavNum);
-console.log(thirdFavNum == firstFavNum || firstFavNum >= secondFavNum);
-//output: 45 == 22||22 >= 30
+console.log(secondFavNum + " == " + firstFavNum + " || " + firstFavNum + " >= " + secondFavNum);
+console.log(secondFavNum == firstFavNum || firstFavNum >= secondFavNum);
+//output: 30 == 22 || 22 >= 30
 //        false
 
 //NOT
@@ -85,27 +84,27 @@ console.log(!(secondFavNum > firstFavNum));
 //output: !(30 > 22)
 //        false
 
-console.log("!" + "(" + firstFavNum + " == " + thirdFavNum + ")" );
-console.log(!(firstFavNum == thirdFavNum));
-//output: !(22 == 45)
+console.log("!" + "(" + firstFavNum + " == " + secondFavNum + ")" );
+console.log(!(firstFavNum == secondFavNum));
+//output: !(22 == 30)
 //        true
 
 //COMBINED
 console.log("COMBINED");
 
-console.log("!" + "(" + (firstFavNum + " == " + secondFavNum + ")" + " && " + "(" + thirdFavNum + " < " + firstFavNum + ")"));
-console.log(!(firstFavNum == secondFavNum) && (thirdFavNum < firstFavNum));
-//output: !(22 == 30) && (45 < 22)
+console.log("!" + "(" + (firstFavNum + " == " + secondFavNum + ")" + " && " + "(" + secondFavNum + " < " + firstFavNum + ")"));
+console.log(!(firstFavNum == secondFavNum) && (secondFavNum < firstFavNum));
+//output: !(22 == 30) && (30 < 22)
 //        false
 
-console.log(("!" + "(" + thirdFavNum + " <= " + firstFavNum + ")") + " || " + "!" + "(" + firstFavNum + " >= " + secondFavNum + ")");
-console.log(!(thirdFavNum <= firstFavNum) || !(firstFavNum >= secondFavNum));
-//output: !(45 <= 22) || !(22 >= 30)
+console.log(("!" + "(" + secondFavNum + " <= " + firstFavNum + ")") + " || " + "!" + "(" + firstFavNum + " >= " + secondFavNum + ")");
+console.log(!(secondFavNum <= firstFavNum) || !(firstFavNum >= secondFavNum));
+//output: !(30 <= 22) || !(22 >= 30)
 //        true
 
-console.log("!" + "(" + secondFavNum + " == " + thirdFavNum + ")" + " && " + "(" + thirdFavNum + " <= " + firstFavNum + ")");
-console.log(!(secondFavNum == thirdFavNum) && (thirdFavNum <= firstFavNum));
-//output: !(30 == 45) && (45 <= 22)
+console.log("!" + "(" + secondFavNum + " == " + secondFavNum + ")" + " && " + "(" + firstFavNum + " <= " + firstFavNum + ")");
+console.log(!(secondFavNum == secondFavNum) && (firstFavNum <= firstFavNum));
+//output: !(30 == 30) && (22 <= 22)
 //        false
 
 //overall output:
@@ -126,24 +125,24 @@ console.log(!(secondFavNum == thirdFavNum) && (thirdFavNum <= firstFavNum));
 // LOOSE INEQUALITY
 // 22 != 30 = true
 // AND
-// 22 > 30 && 30 < 45
+// 22 > 30 && 30 < 22
 // false
-// 45 >= 30 && 22 != 45
+// 30 >= 30 && 22 == 22
 // true
 // OR
-// 22 > 45 || 30 >= 22
+// 22 > 30 || 30 >= 22
 // true
-// 45 == 22 || 22 >= 30
+// 30 == 22 || 22 >= 30
 // false
 // NOT
 // !(30 > 22)
 // false
-// !(22 == 45)
+// !(22 == 30)
 // true
 // COMBINED
-// !(22 == 30) && (45 < 22)
+// !(22 == 30) && (30 < 22)
 // false
-// !(45 <= 22) || !(22 >= 30)
+// !(30 <= 22) || !(22 >= 30)
 // true
-// !(30 == 45) && (45 <= 22)
+// !(30 == 30) && (22 <= 22)
 // false
